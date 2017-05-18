@@ -1,1 +1,392 @@
-Hello World
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="GitSSH2 is a web git client built in Symfony PHP framework which can connect over sftp/ssh to remove servers and run git commands">
+        <meta name="author" content="Paul Schweppe">
+
+        <title>GitSSH2 – Web Git Version Control Over SSH2</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom Google Web Font -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+        <!-- Magnific Popup core CSS file -->
+        <link rel="stylesheet" href="css/magnific-popup.css"> 
+
+        <!-- Custom CSS-->
+        <link href="css/general.css" rel="stylesheet">
+
+        <!-- Owl-Carousel -->
+        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link href="css/owl.theme.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+
+
+
+        <script src="js/modernizr-2.8.3.min.js"></script>  <!-- Modernizr /-->
+        <!--[if IE 9]>
+                <script src="js/PIE_IE9.js"></script>
+        <![endif]-->
+        <!--[if lt IE 9]>
+                <script src="js/PIE_IE678.js"></script>
+        <![endif]-->
+
+        <!--[if lt IE 9]>
+                <script src="js/html5shiv.js"></script>
+        <![endif]-->
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-97213008-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+        <script type="application/ld+json">
+          {
+            "@context": "http://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "GITSSH2",
+            "author": "Paul Schweppe",
+            "description": "GitSSH2 is a web git client built in Symfony PHP framework which can connect over sftp/ssh to remove servers and run git commands",
+            "applicationCategory": "http://schema.org/DeveloperApplication",
+            "downloadURL": "https://github.com/SSHVersionControl/git-web-client/archive/master.zip",
+            "softwareVersion": "0.1.0",
+            "requirements" : "PHP, webserver, database",
+            "memoryRequirements" : "1gb",
+            "operatingSystem": "Debain, Ubuntu, Windows",
+            "offers": {
+                 "@type": "Offer",
+                  "description" : "Free",
+                  "price" :0,
+                  "priceCurrency": "EUR"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "1"
+            }
+          }
+        </script>
+
+    </head>
+
+    <body id="home">
+
+        <!-- Preloader -->
+        <div id="preloader">
+            <div id="status"></div>
+        </div>
+
+        <!-- FullScreen -->
+        <div class="intro-header">
+            <div class="col-xs-12 text-center abcen1">
+                <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">GITSSH2</h1>
+                <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Git Web Client Over SSH</h3>
+                <ul class="list-inline intro-social-buttons">
+                    <li><a href="https://github.com/SSHVersionControl/git-web-client" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Github</span></a>
+                    </li>
+                    <li id="download" ><a href="https://github.com/SSHVersionControl/git-web-client/archive/master.zip" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Download</span></a>
+                    </li>
+                </ul>
+            </div>    
+            <!-- /.container -->
+            <div class="col-xs-12 text-center abcen wow fadeIn">
+                <div class="button_down "> 
+                    <a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#whatis"> <img class="img_scroll" src="img/icon/circle.png" alt=""> </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NavBar-->
+        <nav class="navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#home">GitSSH2</a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+
+                        <li class="menuItem"><a href="#whatis">What is?</a></li>
+                        <li class="menuItem"><a href="#screen">Screenshot</a></li>
+                        <li class="menuItem"><a href="#features">Features</a></li>
+                        <li class="menuItem"><a href="#installation">Installation</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav> 
+
+        <!-- What is -->
+        <div id="whatis" class="content-section-b" style="border-top: 0">
+            <div class="container">
+
+                <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+                    <h2>What is?</h2>
+                    <p class="lead" style="margin-top:0">GitSSH2 is a Web Git client built in Symfony's PHP framwork. It can connect to remote servers over ssh and run git commands such as commit, branch, push, pull, etc. </p>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-4 wow fadeInDown text-center">
+                        <div class="box-icon rotate middle"> 
+                            <i class="fa fa-product-hunt fa-4x "> </i> 
+                        </div>
+                        <h3>Projects</h3>
+                        <p class="lead">Have multiple git repositories grouped under a single project.</p>
+
+                        <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+                    </div><!-- /.col-lg-4 -->
+
+                    <div class="col-sm-4 wow fadeInDown text-center">
+                        <div class="box-icon rotate middle"> 
+                            <i class="fa fa-file-code-o fa-4x "> </i> 
+                        </div>
+                        <h3>File Listing</h3>
+                        <p class="lead">List all files on a remote server project. Not just the files under version control.</p>
+                    </div><!-- /.col-lg-4 -->
+
+                    <div class="col-sm-4 wow fadeInDown text-center">
+                        <div class="box-icon rotate middle"> 
+                            <i class="fa fa-bug fa-4x "> </i> 
+                        </div>
+                        <h3>Issues</h3>
+                        <p class="lead">Use the systems issue tracker, or integrate with Github or Gitlab issue tracker  </p>
+                    </div><!-- /.col-lg-4 -->
+
+                </div><!-- /.row -->
+
+                <div class="row tworow">
+
+                    <div class="col-sm-4  wow fadeInDown text-center">
+                        <div class="box-icon rotate middle"> 
+                            <i class="fa fa-user fa-4x "> </i> 
+                        </div>
+                        <h3>User Control Access</h3>
+                        <p class="lead">Create users with different access controls. Have different users commit to the same git repo but still have different author names</p>
+                    </div><!-- /.col-lg-4 -->
+
+                    <div class="col-sm-4 wow fadeInDown text-center">
+                        <div class="box-icon rotate middle"> 
+                            <i class="fa fa-history fa-4x "> </i> 
+                        </div>
+                        <h3>Simple Commit Interface</h3>
+                        <p class="lead">Don't scare new users with all options showing on one screen</p>
+                    </div><!-- /.col-lg-4 -->
+
+                    <div class="col-sm-4 wow fadeInDown text-center">
+                        <div class="box-icon rotate middle"> 
+                            <i class="fa fa-history fa-4x "> </i> 
+                        </div>
+                        <h3>Commit History</h3>
+                        <p class="lead">See history for any branch and search commits by message, author or content</p>
+                    </div><!-- /.col-lg-4 -->
+
+                </div><!-- /.row -->
+            </div>
+        </div>
+
+
+
+        <!-- Screenshot -->
+        <div id="screen" class="content-section-a">
+            <div class="container">
+                <div class="row" >
+                    <div class="col-md-6 col-md-offset-3 text-center wrap_title ">
+                        <h2>Screen Shots</h2>
+                        <p class="lead" style="margin-top:0"></p>
+                    </div>
+                </div>
+                <div class="row wow bounceInUp" >
+                    <div id="owl-demo" class="owl-carousel">
+                        <a href="img/screenshots/new-project.jpg" class="image-link" title="Create New Project">
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/screenshots/new-project.jpg" alt="Create New Project">
+                            </div>
+                        </a>
+
+                        <a href="img/screenshots/new-enviornment.jpg" class="image-link" title="Create New Git Repository. Clone repository, create new repository or use an existing repository" >
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/screenshots/new-enviornment.jpg" alt="Create New Git Repository, Options">
+                            </div>
+                        </a>
+
+                        <a href="img/screenshots/new-enviornment-2.jpg"  class="image-link" title="Clone Git Repository. Enter SSH details to create on remote server.">
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/screenshots/new-enviornment-2.jpg" alt="Create New Git Repository, Clone part 1">
+                            </div>
+                        </a>
+
+                        <a href="img/screenshots/new-enviornment-3.jpg" class="image-link" title="Clone Git Repository. Enter SSH details to create on remote server.">
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/screenshots/new-enviornment-3.jpg" alt="Create New Git Repository, Clone part 2">
+                            </div>
+                        </a>
+
+                        <a href="img/screenshots/new-enviornment-4.jpg" class="image-link" title="Clone Git Repository. Project environment details">
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/screenshots/new-enviornment-4.jpg" alt="Create New Git Repository, Clone part 3">
+                            </div>
+                        </a>
+
+                        <a href="img/screenshots/file-listing.jpg" class="image-link" title="View Project files, even those that are not commited or been ignored">
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/screenshots/file-listing.jpg" alt="View Project files">
+                            </div>
+                        </a>
+                        <a href="img/screenshots/history.jpg" class="image-link" title="View Commit History. Search across commits byt author message or content">
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/screenshots/history.jpg" alt="View Commit History">
+                            </div>
+                        </a>
+                        <a href="img/screenshots/history2.jpg" class="image-link" title="View files changed by commit">
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/screenshots/history2.jpg" alt="View files in commit">
+                            </div>
+                        </a>
+
+                        <a href="img/screenshots/commit.jpg" class="image-link" title="Commit files. Push automaticly to remote repository github/gitlab. Link commit with issue.">
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/screenshots/commit.jpg" alt="Commit files">
+                            </div>
+                        </a>
+                        <a href="img/screenshots/branch-1.jpg" class="image-link" title="Manage branches. Link an issue with a branch name.">
+                            <div class="item">
+                                <img  class="img-responsive img-rounded" src="img/screenshots/branch-1.jpg" alt="Manage Branches">
+                            </div>
+                        </a>
+                    </div>       
+                </div>
+            </div>
+        </div>
+
+        <!-- Use it -->
+        <div id="features" class="content-section-b dark-bg">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-12 pull-right wow fadeInRightBig">
+                        <h3 class="section-heading text-center">Other Features</h3>
+                    </div>
+
+                    <div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">   
+                        <ul class="feature-list">
+                            <li>Easily switch between repositories in a project</li>
+                            <li>No need to stash. Already done for you</li>
+                            <li>Create branches directly from issues</li>
+                            <li>Open as may windows as you like. It is a web app after all</li>
+                            <li>Resolve merge commits with a single click</li>
+                            <li>Push, pull, and fetch from remote repositories</li>
+                            <li>View unsynced commits</li>
+                            <li>Easily create, delete and rename branches, and remotes</li>
+                            <li>Undo commits</li>
+                            <li>View Diffs in the browser</li>
+                        </ul>
+                    </div>   
+                </div>
+            </div>
+            <!-- /.container -->
+        </div>
+
+        <div id="installation" class="content-section-a">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+                        <h2>Installation</h2>
+                    </div>
+                    <p>Coming soon <a href="https://github.com/SSHVersionControl/git-web-client">see here</a></p>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h3 class="footer-title"><a href="mailto:paulschweppe@gmail.com">Contact Me</a></h3>
+
+
+                        <!-- LICENSE -->
+                        <a href="#">GitSSH2 </a> by
+                        <a  href="mailto:paulschweppe@gmail.com"
+                            property="cc:attributionName">Paul Schweppe</a>
+                        is released under the <a rel="license" href="https://opensource.org/licenses/MIT">MIT license</a>.
+
+
+
+                    </div> <!-- /col-xs-7 -->
+
+                    <div class="col-md-5">
+                        <div class="footer-banner">
+                            <h3 class="footer-title">GitSSH2</h3>
+                            Go to: <a href="https://github.com/SSHVersionControl/git-web-client" target="_blank">https://github.com/SSHVersionControl/git-web-client</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/script.js"></script>
+        <!-- StikyMenu -->
+        <script src="js/stickUp.min.js"></script>
+        <script type="text/javascript">
+            jQuery(function ($) {
+                $(document).ready(function () {
+                    $('.navbar-default').stickUp();
+
+                });
+            });
+
+        </script>
+        <!-- Smoothscroll -->
+        <script type="text/javascript" src="js/jquery.corner.js"></script> 
+        <script src="js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <script src="js/classie.js"></script>
+        <script src="js/uiMorphingButton_inflow.js"></script>
+        <!-- Magnific Popup core JS file -->
+        <script src="js/jquery.magnific-popup.js"></script> 
+
+    </body>
+</html>
