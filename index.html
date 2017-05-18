@@ -10,15 +10,14 @@
         <meta name="description" content="GitSSH2 is a web git client built in Symfony PHP framework which can connect over sftp/ssh to remove servers and run git commands">
         <meta name="author" content="Paul Schweppe">
 
-        <title>GitSSH2 – Web Git Version Control Over SSH2</title>
+        <title>GitSSH2 – Git Interface Web Client Over SSH2</title>
 
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom Google Web Font -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
         <!-- Magnific Popup core CSS file -->
         <link rel="stylesheet" href="css/magnific-popup.css"> 
@@ -66,7 +65,7 @@
         </script>
 
         <script type="application/ld+json">
-          {
+            {
             "@context": "http://schema.org",
             "@type": "SoftwareApplication",
             "name": "GITSSH2",
@@ -79,17 +78,17 @@
             "memoryRequirements" : "1gb",
             "operatingSystem": "Debain, Ubuntu, Windows",
             "offers": {
-                 "@type": "Offer",
-                  "description" : "Free",
-                  "price" :0,
-                  "priceCurrency": "EUR"
+            "@type": "Offer",
+            "description" : "Free",
+            "price" :0,
+            "priceCurrency": "EUR"
             },
             "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "1"
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "1"
             }
-          }
+            }
         </script>
 
     </head>
@@ -103,20 +102,24 @@
 
         <!-- FullScreen -->
         <div class="intro-header">
-            <div class="col-xs-12 text-center abcen1">
-                <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">GITSSH2 TEST</h1>
-                <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Git Web Client Over SSH</h3>
-                <ul class="list-inline intro-social-buttons">
-                    <li><a href="https://github.com/SSHVersionControl/git-web-client" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Github</span></a>
-                    </li>
-                    <li id="download" ><a href="https://github.com/SSHVersionControl/git-web-client/archive/master.zip" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Download</span></a>
-                    </li>
-                </ul>
-            </div>    
-            <!-- /.container -->
-            <div class="col-xs-12 text-center abcen wow fadeIn">
-                <div class="button_down "> 
-                    <a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#whatis"> <img class="img_scroll" src="img/icon/circle.png" alt=""> </a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 text-left abcen1">
+                        <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s"><i class="fa fa-code-fork" aria-hidden="true"></i>GITSSH2</h1>
+                        <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Git Web Interface Client to manage all your git repositories hosted on different servers in one place.</h3>
+                        <ul class="list-inline intro-social-buttons">
+                            <li><a href="https://github.com/SSHVersionControl/git-web-client" class="btn btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s">
+                                    <span class="network-name"><i class="fa fa-github" aria-hidden="true"></i> Github</span></a>
+                            </li>
+                            <li id="download" ><a href="https://github.com/SSHVersionControl/git-web-client/archive/master.zip" class="btn btn-lg btn-info wow swing wow fadeIn" data-wow-delay="1.2s">
+                                    <span class="network-name"><i class="fa fa-download" aria-hidden="true"></i> Download</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>  
+                    <div class="col-sm-6 hidden-xs">
+                        <img src="img/screenshots/file-listing.jpg" class="img-responsive left-panel" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -153,14 +156,14 @@
 
                 <div class="col-md-6 col-md-offset-3 text-center wrap_title">
                     <h2>What is?</h2>
-                    <p class="lead" style="margin-top:0">GitSSH2 is a Web Git client built in Symfony's PHP framwork. It can connect to remote servers over ssh and run git commands such as commit, branch, push, pull, etc. </p>
+                    <p class="lead" style="margin-top:0">GitSSH2 is a Git web interface client built in Symfony's PHP framwork. It can connect to remote servers over ssh and run git commands such as commit, branch, push, pull, etc. </p>
 
                 </div>
 
                 <div class="row">
 
                     <div class="col-sm-4 wow fadeInDown text-center">
-                        <div class="box-icon rotate middle"> 
+                        <div class="box-icon middle"> 
                             <i class="fa fa-product-hunt fa-4x "> </i> 
                         </div>
                         <h3>Projects</h3>
@@ -170,7 +173,7 @@
                     </div><!-- /.col-lg-4 -->
 
                     <div class="col-sm-4 wow fadeInDown text-center">
-                        <div class="box-icon rotate middle"> 
+                        <div class="box-icon middle"> 
                             <i class="fa fa-file-code-o fa-4x "> </i> 
                         </div>
                         <h3>File Listing</h3>
@@ -178,7 +181,7 @@
                     </div><!-- /.col-lg-4 -->
 
                     <div class="col-sm-4 wow fadeInDown text-center">
-                        <div class="box-icon rotate middle"> 
+                        <div class="box-icon middle"> 
                             <i class="fa fa-bug fa-4x "> </i> 
                         </div>
                         <h3>Issues</h3>
@@ -190,7 +193,7 @@
                 <div class="row tworow">
 
                     <div class="col-sm-4  wow fadeInDown text-center">
-                        <div class="box-icon rotate middle"> 
+                        <div class="box-icon middle"> 
                             <i class="fa fa-user fa-4x "> </i> 
                         </div>
                         <h3>User Control Access</h3>
@@ -198,7 +201,7 @@
                     </div><!-- /.col-lg-4 -->
 
                     <div class="col-sm-4 wow fadeInDown text-center">
-                        <div class="box-icon rotate middle"> 
+                        <div class="box-icon middle"> 
                             <i class="fa fa-history fa-4x "> </i> 
                         </div>
                         <h3>Simple Commit Interface</h3>
@@ -206,7 +209,7 @@
                     </div><!-- /.col-lg-4 -->
 
                     <div class="col-sm-4 wow fadeInDown text-center">
-                        <div class="box-icon rotate middle"> 
+                        <div class="box-icon middle"> 
                             <i class="fa fa-history fa-4x "> </i> 
                         </div>
                         <h3>Commit History</h3>
@@ -298,7 +301,7 @@
 
                 <div class="row">
 
-                    <div class="col-sm-12 pull-right wow fadeInRightBig">
+                    <div class="col-sm-12  wow fadeInRightBig">
                         <h3 class="section-heading text-center">Other Features</h3>
                     </div>
 
@@ -327,8 +330,9 @@
                     <div class="col-md-6 col-md-offset-3 text-center wrap_title">
                         <h2>Installation</h2>
                     </div>
-                    <p>Coming soon <a href="https://github.com/SSHVersionControl/git-web-client">see here</a></p>
-                    
+                    <div class="col-md-12">
+                        <p>Coming soon <a href="https://github.com/SSHVersionControl/git-web-client">see here</a></p>
+                    </div>
                 </div>
             </div>
         </div>
