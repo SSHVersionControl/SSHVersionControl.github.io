@@ -252,8 +252,11 @@ color: #ECEBEB;
 }
 
 .lead {
-	font-size: 16px;
-	font-weight: 400;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.46428571;
+    font-weight: 300;
 }
 
 .intro-header {
@@ -1263,10 +1266,6 @@ color: #ECEBEB;
 	}	
 }
 
-footer {
-	background-color: #f8f8f8;
-	padding: 50px 0;
-}
 
 p.copyright {
 	margin: 15px 0 0;
