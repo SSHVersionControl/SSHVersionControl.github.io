@@ -164,9 +164,20 @@ filter: alpha(opacity=95) !important;
 }
 
 .mybutton_cyano:hover{
+	border: 1px solid #82b3d2;
+	background: #82b3d2;
+}
+
+.btn-demo{
+	border: 1px solid #32678a;
+	color: #fff;
+	background-color:#32678a;
+}
+
+.btn-demo:hover{
 	border: 1px solid #4A90BE;
-	color: #4A90BE !important;
-	background: rgba(204, 204, 204, 0);
+	color: #fff !important;
+	background: #1d3d52;
 }
 
 .button_down img {
@@ -1364,4 +1375,10 @@ p.copyright {
 
 .left-panel{
     margin-top: 10%;
+}
+
+.modal-header .close,
+.modal-header .close:hover,
+.modal-header .close:focus {
+    color: #000;
 }
