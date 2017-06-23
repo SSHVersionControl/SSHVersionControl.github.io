@@ -1382,3 +1382,46 @@ p.copyright {
 .modal-header .close:focus {
     color: #000;
 }
+
+.nav-tabs {
+    border-bottom: 1px solid #008749;
+}
+
+.tab-content{
+    padding: 15px;
+    border-left: 1px solid #008749;
+    border-right: 1px solid #008749;
+    border-bottom: 1px solid #008749;
+}
+
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    background-color: #00a65a;
+    color: #ffffff;
+}
+
+.nav-tabs>li>a:hover {
+    border-color: #008749 #008749 #008749;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: none;
+    background-color: #008749;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+    color: #ffffff;
+    background-color: #008749;
+    border: 1px solid #ecf0f1;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+.code{
+    margin-bottom: 15px;
+}
+code{
+       white-space: pre; 
+}
