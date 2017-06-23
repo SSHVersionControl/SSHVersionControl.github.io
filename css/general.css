@@ -276,7 +276,7 @@ color: #ECEBEB;
 	color: #f8f8f8;
 	overflow: hidden;
 	max-height: 540px;
-	min-height: 400px;
+	min-height: 500px;
 	text-align: center;
 }
 
@@ -1139,8 +1139,8 @@ color: #ECEBEB;
 	@media only screen and (max-width: 767px) {
 		
 		.intro-header{
-                    height: 360px;
-                    min-height: 360px;
+                    height: 410px;
+                    min-height: 410px;
                 }
         
 		h1, .h1 {
@@ -1154,7 +1154,14 @@ color: #ECEBEB;
 		
 		.button_down {display:none}
 		
-		
+                #demo{
+                    display: block;
+                    width: 100%;
+                    margin-top: 5px;
+                }
+                #demo .btn-demo{
+                    width: 100%;
+                }
 	}
 
 /* Mobile Landscape */
